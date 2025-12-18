@@ -9,15 +9,10 @@
 */
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MagicianLordTrainer
@@ -1065,7 +1060,6 @@ namespace MagicianLordTrainer
                             // Add them together
                             writeValue = p1RightOrb2 + p1SelectedLeftOrb;
                         }
-                        Console.WriteLine("Writing left orb writeValue: " + writeValue);
                         // Write the combined value of the left and right orbs
                         WriteByte(hProc, p1Form4AddressGlobal, Convert.ToByte(writeValue));
                     }
@@ -1094,7 +1088,6 @@ namespace MagicianLordTrainer
                             // Add them together
                             writeValue = p1leftOrb1 + p1SelectedRightOrb;
                         }
-                        Console.WriteLine("Writing right orb writeValue: " + writeValue);
                         // Write the combined value of the left and right orbs
                         WriteByte(hProc, p1Form4AddressGlobal, Convert.ToByte(writeValue));
                     }
@@ -1112,11 +1105,8 @@ namespace MagicianLordTrainer
                     int p1LeftOrb1 = GetLeftOrb1Value(orbsValue);
                     int p1RightOrb2 = GetRightOrb2Value(orbsValue);
 
-                    Console.WriteLine("orbsValue: " + orbsValue);
-
                     try
                     {
-                        //0,4,8,12
                         if (p1LeftOrb1 == 0)
                         {
                             comboBoxFormLeftOrb1Read.SelectedIndex = 0;
@@ -1162,7 +1152,6 @@ namespace MagicianLordTrainer
 
         private int GetLeftOrb1Value(int orbsValue)
         {
-            Console.WriteLine("GetLeftOrb1Value orbsValue: " + orbsValue);
             int orb1Value = 0;
 
             bool isMultiple1 = orbsValue % 1 == 0;
@@ -1251,29 +1240,11 @@ namespace MagicianLordTrainer
                 orb1Value = 0;
             }
 
-            //if (orbsValue == 0 || isMultiple16 || isMultiple1 || isMultiple2 || isMultiple3)
-            //{
-            //    orb1Value = 0;
-            //}
-            //else if (isMultiple4 || isMultiple5 || isMultiple6 || isMultiple7)
-            //{
-            //    orb1Value = 1;
-            //}
-            //else if (isMultiple8 || isMultiple9 || isMultiple10 || isMultiple11)
-            //{
-            //    orb1Value = 2;
-            //}
-            //else if (isMultiple12 || isMultiple13 || isMultiple14 || isMultiple15)
-            //{
-            //    orb1Value = 3;
-            //}
-            Console.WriteLine("GetLeftOrb1Value: " + orb1Value);
             return orb1Value;
         }
 
         private int GetRightOrb2Value(int orbsValue)
         {
-            Console.WriteLine("GetRightOrb2Value orbsValue: " + orbsValue);
             int orb2Value = 0;
 
             bool isMultiple1 = orbsValue % 1 == 0;
@@ -1362,23 +1333,6 @@ namespace MagicianLordTrainer
                 orb2Value = 1;
             }
 
-            //if (orbsValue == 0 || isMultiple16 || isMultiple4 || isMultiple8 || isMultiple12)
-            //{
-            //    orb2Value = 0;
-            //}
-            //else if (isMultiple1 || isMultiple5 || isMultiple9 || isMultiple13)
-            //{
-            //    orb2Value = 1;
-            //}
-            //else if (isMultiple2 || isMultiple6 || isMultiple10 || isMultiple14)
-            //{
-            //    orb2Value = 2;
-            //}
-            //else if (isMultiple3 || isMultiple7 || isMultiple11 || isMultiple15)
-            //{
-            //    orb2Value = 3;
-            //}
-            Console.WriteLine("GetRightOrb2Value: " + orb2Value);
             return orb2Value;
         }
     }
