@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxP1Form2Write = new System.Windows.Forms.TextBox();
             this.textBoxP1Form2Read = new System.Windows.Forms.TextBox();
@@ -119,6 +120,7 @@
             this.checkBoxFormLeftOrb1 = new System.Windows.Forms.CheckBox();
             this.labelFormLeftOrb1 = new System.Windows.Forms.Label();
             this.comboBoxFormLeftOrb1Read = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxLog.SuspendLayout();
             this.groupBoxOverride.SuspendLayout();
@@ -132,6 +134,8 @@
             this.textBoxP1Form2Write.Name = "textBoxP1Form2Write";
             this.textBoxP1Form2Write.Size = new System.Drawing.Size(50, 20);
             this.textBoxP1Form2Write.TabIndex = 72;
+            this.toolTip1.SetToolTip(this.textBoxP1Form2Write, "Normal = 10\r\nDragon = 10\r\nRaijin = 12\r\nShinobi = 12\r\nSamurai = 12\r\nPoseidon = 10\r" +
+        "\nWaterman = 10");
             // 
             // textBoxP1Form2Read
             // 
@@ -204,6 +208,8 @@
             this.textBoxP1Form3Write.Name = "textBoxP1Form3Write";
             this.textBoxP1Form3Write.Size = new System.Drawing.Size(50, 20);
             this.textBoxP1Form3Write.TabIndex = 49;
+            this.toolTip1.SetToolTip(this.textBoxP1Form3Write, "Normal = 10\r\nDragon = 08\r\nRaijin = 10\r\nShinobi = 12\r\nSamurai = 11\r\nPoseidon = 07\r" +
+        "\nWaterman = 09");
             // 
             // textBoxP1LivesWrite
             // 
@@ -260,6 +266,7 @@
             this.textBoxP1InvincibilityTimerWrite.Name = "textBoxP1InvincibilityTimerWrite";
             this.textBoxP1InvincibilityTimerWrite.Size = new System.Drawing.Size(50, 20);
             this.textBoxP1InvincibilityTimerWrite.TabIndex = 38;
+            this.toolTip1.SetToolTip(this.textBoxP1InvincibilityTimerWrite, "Freeze at 255");
             // 
             // textBoxP1HPBarWrite
             // 
@@ -585,6 +592,7 @@
             this.textBoxDeathBringerCountdownTimerWrite.Name = "textBoxDeathBringerCountdownTimerWrite";
             this.textBoxDeathBringerCountdownTimerWrite.Size = new System.Drawing.Size(50, 20);
             this.textBoxDeathBringerCountdownTimerWrite.TabIndex = 95;
+            this.toolTip1.SetToolTip(this.textBoxDeathBringerCountdownTimerWrite, "DeathBringer Countdown Timer  (default 37d, 25h)");
             // 
             // textBoxDeathBringerCountdownTimerRead
             // 
@@ -617,6 +625,7 @@
             this.textBoxDemoTimer2Write.Name = "textBoxDemoTimer2Write";
             this.textBoxDemoTimer2Write.Size = new System.Drawing.Size(50, 20);
             this.textBoxDemoTimer2Write.TabIndex = 91;
+            this.toolTip1.SetToolTip(this.textBoxDemoTimer2Write, "End Demo = 3");
             // 
             // textBoxDemoTimer2Read
             // 
@@ -649,6 +658,7 @@
             this.textBoxDemoTimer1Write.Name = "textBoxDemoTimer1Write";
             this.textBoxDemoTimer1Write.Size = new System.Drawing.Size(50, 20);
             this.textBoxDemoTimer1Write.TabIndex = 87;
+            this.toolTip1.SetToolTip(this.textBoxDemoTimer1Write, "Each countdown adds 1 to Timer 2");
             // 
             // textBoxDemoTimer1Read
             // 
@@ -681,6 +691,7 @@
             this.textBoxFlyingMonsters2Write.Name = "textBoxFlyingMonsters2Write";
             this.textBoxFlyingMonsters2Write.Size = new System.Drawing.Size(50, 20);
             this.textBoxFlyingMonsters2Write.TabIndex = 83;
+            this.toolTip1.SetToolTip(this.textBoxFlyingMonsters2Write, "0 for none, 255 for many");
             // 
             // textBoxFlyingMonsters2Read
             // 
@@ -713,6 +724,7 @@
             this.textBoxFlyingMonsters1Write.Name = "textBoxFlyingMonsters1Write";
             this.textBoxFlyingMonsters1Write.Size = new System.Drawing.Size(50, 20);
             this.textBoxFlyingMonsters1Write.TabIndex = 79;
+            this.toolTip1.SetToolTip(this.textBoxFlyingMonsters1Write, "0 for none, 255 for many");
             // 
             // textBoxFlyingMonsters1Read
             // 
@@ -802,6 +814,7 @@
             this.textBoxSpawnDeathBringerWrite.Name = "textBoxSpawnDeathBringerWrite";
             this.textBoxSpawnDeathBringerWrite.Size = new System.Drawing.Size(50, 20);
             this.textBoxSpawnDeathBringerWrite.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.textBoxSpawnDeathBringerWrite, "255 = spawn");
             // 
             // textBoxSpawnDeathBringerRead
             // 
@@ -887,6 +900,9 @@
             this.comboBoxFormRightOrb2Write.Name = "comboBoxFormRightOrb2Write";
             this.comboBoxFormRightOrb2Write.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFormRightOrb2Write.TabIndex = 80;
+            this.toolTip1.SetToolTip(this.comboBoxFormRightOrb2Write, "Fire + Fire   - The Dragon Warrior\r\nWater + Water - The Waterman\r\nWater + Fire  -" +
+        " Poseidon\r\nWind + Fire   - Shinobi\r\nWater + Wind  - Samurai\r\nWind + Wind   - Rai" +
+        "jin");
             // 
             // checkBoxFormRightOrb2
             // 
@@ -921,6 +937,9 @@
             this.comboBoxFormLeftOrb1Write.Name = "comboBoxFormLeftOrb1Write";
             this.comboBoxFormLeftOrb1Write.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFormLeftOrb1Write.TabIndex = 76;
+            this.toolTip1.SetToolTip(this.comboBoxFormLeftOrb1Write, "Fire + Fire   - The Dragon Warrior\r\nWater + Water - The Waterman\r\nWater + Fire  -" +
+        " Poseidon\r\nWind + Fire   - Shinobi\r\nWater + Wind  - Samurai\r\nWind + Wind   - Rai" +
+        "jin");
             // 
             // checkBoxFormLeftOrb1
             // 
@@ -1066,6 +1085,7 @@
         private System.Windows.Forms.CheckBox checkBoxFormRightOrb2;
         private System.Windows.Forms.Label labelFormRightOrb2;
         private System.Windows.Forms.ComboBox comboBoxFormRightOrb2Read;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
